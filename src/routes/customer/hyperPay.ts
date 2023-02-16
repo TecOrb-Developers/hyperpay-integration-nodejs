@@ -9,7 +9,8 @@ const { CREATED, OK } = StatusCodes;
 // Paths
 export const p = {
     NormalCheckout: '/NormalCheckout',
-    verifypayment:'/verifypayment'
+    verifypayment:'/verifypayment',
+    refundPayment:'/refundPayment'
 } as const;
 
 /////////////////////// Normal Checkout ///////////////////////
@@ -20,6 +21,11 @@ router.post(p.NormalCheckout, async (req: any, res: Response) => {
 
 router.post(p.verifypayment, async (req: any, res: Response) => {
     const data = await hyperController.verifypayment(req.body);
+    return res.status(OK).send({ data, code: OK, message:'success',result:data});
+});
+
+router.post(p.refundPayment, async (req: any, res: Response) => {
+    const data = await hyperController.refundPayment(req.body);
     return res.status(OK).send({ data, code: OK, message:'success',result:data});
 });
 
