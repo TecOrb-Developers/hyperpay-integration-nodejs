@@ -1,7 +1,7 @@
-## Job Scheduling
+## HyperPay using TypeScript
 
 ## Introduction
-    Job Scheduling in node js. Job Scheduling by using node-cron.
+    HyperPay in node js. HyperPay using TypeScript. We have provide hyperpay payment api like- checkout api,verify api and refund api
 
 ## Setup Steps:
 `npm install`
@@ -11,3 +11,13 @@
 `npm run build`
 ### prod build run
 `node dist/index.js`
+
+## Hyperpay payment apis - 
+  #### Checkout api for normal/ApplePay checkout
+  `{{Your Ip}}/api/v1/hyperPay/NormalCheckout`
+
+  #### Hyperpay payment verify api
+  `{{Your Ip}}/api/v1/hyperPay/verifypayment`
+
+  #### Hyperpay refund api
+  `{{Your Ip}}/api/v1/hyperPay/refundPayment`
